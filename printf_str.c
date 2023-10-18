@@ -8,6 +8,7 @@
 int printf_str(char *str)
 {
 	int count = 0, i = 0;
+
 	if (str)
 	{
 		while (str[i] != '\0')
