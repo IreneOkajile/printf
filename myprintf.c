@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 		{
 			s = printf_digit_d(va_arg(list, int));
 			i++;
-			count += s
+			count += s;
 		}
 	}
 	_putchar('\n');
