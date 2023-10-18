@@ -9,6 +9,8 @@
 int printf_str(char *);
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printf_digit_d(int);
+int printf_digit_i(int);
 
 
 #endif
