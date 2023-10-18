@@ -21,11 +21,13 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
+			count++;
 		}
 		else if (format[i + 1] == 'c')
 		{
 			_putchar(va_arg(list, int));
 			i++;
+			count++;
 		}
 		else if (format[i + 1] == 's')
 		{
@@ -37,15 +39,16 @@ int _printf(const char *format, ...)
 		{
 			_putchar('%');
 			i++;
+			count++;
 		}
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
 			s = printf_digit_d(va_arg(list, int));
 			i++;
-			count += s;
+			count += (s + 1);
+			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 	va_end(list);
 	return (count);
 
